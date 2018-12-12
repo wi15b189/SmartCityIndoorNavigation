@@ -16,6 +16,7 @@ public class MyView extends View {
     public MyView(Context context) {
         super(context);
         init();
+        //super.setBackgroundColor(Color.TRANSPARENT);
     }
 
     public MyView(Context context, AttributeSet attrs) {
@@ -31,12 +32,12 @@ public class MyView extends View {
     private void init() {
         paint = new Paint();
         paint.setColor(Color.BLUE);
-        paint.setStrokeWidth(10);
+        paint.setStrokeWidth(8);
         paint.setStyle(Paint.Style.STROKE);
 
         path = new Path();
-        path.moveTo(50, 50);
-        path.lineTo(50, 500);
+        path.moveTo(500, 100);
+        path.lineTo(500, 500);
         path.lineTo(200, 500);
         path.lineTo(200, 300);
         path.lineTo(350, 300);
