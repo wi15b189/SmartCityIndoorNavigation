@@ -9,24 +9,29 @@ import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 
+    //global variables for zooming
     private ScaleGestureDetector mScaleGestureDetector;
     private float mScaleFactor = 1.0f;
-    private ImageView mImageView;
+    private MyView mImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mImageView=findViewById(R.id.imageView);
+
+        //for zooming
+        mImageView=findViewById(R.id.navView);
         mScaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
     }
 
+    //for zooming
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent) {
         mScaleGestureDetector.onTouchEvent(motionEvent);
         return true;
     }
 
+    //for zooming
     private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override
         public boolean onScale(ScaleGestureDetector scaleGestureDetector){
