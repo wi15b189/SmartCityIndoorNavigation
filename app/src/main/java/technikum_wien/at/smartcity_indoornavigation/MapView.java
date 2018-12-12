@@ -8,23 +8,23 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class MyView extends View {
+public class MapView extends View {
 
     Paint paint;
     Path path;
 
-    public MyView(Context context) {
+    public MapView(Context context) {
         super(context);
         init();
         //super.setBackgroundColor(Color.TRANSPARENT);
     }
 
-    public MyView(Context context, AttributeSet attrs) {
+    public MapView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public MyView(Context context, AttributeSet attrs, int defStyle) {
+    public MapView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }

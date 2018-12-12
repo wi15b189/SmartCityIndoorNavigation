@@ -14,4 +14,36 @@ public class GridPoint {
         this.posY = posY;
         this.accessPoints = accessPoints;
     }
+
+    public String getIdGridPoint() {
+        return idGridPoint;
+    }
+
+    public void setIdGridPoint(String idGridPoint) {
+        this.idGridPoint = idGridPoint;
+    }
+
+    public String getPosX() {
+        return posX;
+    }
+
+    public void setPosX(String posX) {
+        this.posX = posX;
+    }
+
+    public String getPosY() {
+        return posY;
+    }
+
+    public void setPosY(String posY) {
+        this.posY = posY;
+    }
+
+    public List<AccessPoint> getAccessPoints() {
+        return accessPoints;
+    }
+
+    public void setAccessPoints(List<AccessPoint> accessPoints) {
+        this.accessPoints = accessPoints;
+    }
 }
