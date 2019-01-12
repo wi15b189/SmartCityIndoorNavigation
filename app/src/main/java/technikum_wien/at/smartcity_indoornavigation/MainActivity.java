@@ -7,6 +7,7 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.ImageButton;
 
+import technikum_wien.at.smartcity_indoornavigation.Entities.GridPoint;
 import technikum_wien.at.smartcity_indoornavigation.Service.NavigationAppNavigateService;
 
 public class MainActivity extends Activity {
@@ -16,10 +17,14 @@ public class MainActivity extends Activity {
     //private float mScaleFactor = 1.0f;
     //private MapView mImageView;
 
+    NavigationAppNavigateService navService = new NavigationAppNavigateService();
+    APScanner scanner = new APScanner();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //for zooming
         //mImageView=findViewById(R.id.navView);
@@ -35,7 +40,7 @@ public class MainActivity extends Activity {
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // start navigation to stand1
-                //NavigationAppNavigateService.Navigate(1, SPScanner.Scan());
+                navService.navigate(new GridPoint("1", "200", "200"), scanner.showResults());
             }
         });
         final ImageButton button2 = findViewById(R.id.stand2);

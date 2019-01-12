@@ -32,6 +32,7 @@ public class APScanner {
         arrayList.clear();
         scanWifi();
         bluetoothScanning();
+        return null;
     }
 
     //Casting a Context object to an Activity object
