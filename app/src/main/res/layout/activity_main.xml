@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/plan"/>
+            android:src="@mipmap/planupdated"/>
         <technikum_wien.at.smartcity_indoornavigation.MapView
             android:id="@+id/navView"
             android:layout_width="match_parent"
@@ -28,25 +28,46 @@
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@color/colorPrimary">
-        <Button
+        <ImageButton
+            android:id="@+id/stand1"
             android:layout_width="100dp"
-            android:layout_height="80dp" />
-        <Button
+            android:layout_height="100dp"
+            android:tooltipText="Stand1"
+            android:src="@mipmap/planupdated"/>
+        <ImageButton
+            android:id="@+id/stand2"
             android:layout_width="100dp"
-            android:layout_height="80dp" />
-        <Button
+            android:layout_height="100dp"
+            android:tooltipText="Stand2"/>
+        <ImageButton
+            android:id="@+id/stand3"
             android:layout_width="100dp"
-            android:layout_height="80dp" />
-        <Button
+            android:layout_height="100dp"
+            android:tooltipText="Stand3"/>
+        <ImageButton
+            android:id="@+id/stand4"
             android:layout_width="100dp"
-            android:layout_height="80dp" />
-        <Button
+            android:layout_height="100dp"
+            android:tooltipText="Stand4"/>
+        <ImageButton
+            android:id="@+id/stand5"
             android:layout_width="100dp"
-            android:layout_height="80dp" />
-        <Button
+            android:layout_height="100dp"
+            android:tooltipText="Stand5"/>
+        <ImageButton
+            android:id="@+id/stand6"
             android:layout_width="100dp"
-            android:layout_height="80dp" />
-
+            android:layout_height="100dp"
+            android:tooltipText="Stand6"/>
+        <ImageButton
+            android:id="@+id/stand7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:tooltipText="Stand7"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:tooltipText="Stand8"/>
     </LinearLayout>
 
 </LinearLayout>
