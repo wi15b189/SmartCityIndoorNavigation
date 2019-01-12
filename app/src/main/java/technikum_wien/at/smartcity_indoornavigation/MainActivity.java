@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
     NavigationAppNavigateService navService = new NavigationAppNavigateService();
     APScanner scanner = new APScanner();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,8 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // start navigation to stand1
                 navService.navigate(new GridPoint("1", "200", "200"), scanner.showResults());
+                MapView navLayer = findViewById(R.id.navView);
+                
             }
         });
         final ImageButton button2 = findViewById(R.id.stand2);
