@@ -13,8 +13,7 @@
         android:layout_height="match_parent"
         android:background="@mipmap/plan"
         android:scaleX="1"
-        android:scaleY="1"
-        />
+        android:scaleY="1" />
 
     <!--
    <ImageView
