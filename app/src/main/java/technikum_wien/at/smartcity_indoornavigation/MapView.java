@@ -36,11 +36,19 @@ public class MapView extends View {
 
     private void init() {
         paint = new Paint();
-        paint.setColor(Color.BLUE);
-        paint.setStrokeWidth(8);
+        paint.setColor(Color.GREEN);
+        paint.setStrokeWidth(6);
         paint.setStyle(Paint.Style.STROKE);
-        GridPoint gp1 = new GridPoint("2", "20","30");
-        GridPoint gp2 = new GridPoint("3", "20","70");
+        GridPoint gp1 = new GridPoint("2", "0","0");
+        GridPoint gp2 = new GridPoint("3", "10","10");
+        GridPoint gp3 = new GridPoint("3", "20","20");
+        GridPoint gp4 = new GridPoint("3", "30","30");
+        GridPoint gp5 = new GridPoint("3", "40","40");
+        GridPoint gp6 = new GridPoint("3", "50","50");
+        GridPoint gp7 = new GridPoint("3", "60","60");
+        GridPoint gp8 = new GridPoint("3", "70","70");
+        GridPoint gp9 = new GridPoint("3", "80","80");
+
         /*GridPoint gp3 = new GridPoint("4", "100","70");
         GridPoint gp4 = new GridPoint("5", "100","300");
         GridPoint gp5 = new GridPoint("6", "700","300");
@@ -48,9 +56,13 @@ public class MapView extends View {
         Set<GridPoint> gps = new HashSet<GridPoint>();
         gps.add(gp1);
         gps.add(gp2);
-
-
-
+        gps.add(gp3);
+        gps.add(gp4);
+        gps.add(gp5);
+        gps.add(gp6);
+        gps.add(gp7);
+        gps.add(gp8);
+        gps.add(gp9);
 
         path = new Path();
 
