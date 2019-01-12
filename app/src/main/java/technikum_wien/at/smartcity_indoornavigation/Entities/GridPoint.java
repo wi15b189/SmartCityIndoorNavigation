@@ -15,6 +15,12 @@ public class GridPoint {
         this.accessPoints = accessPoints;
     }
 
+    public GridPoint(String idGridPoint, String posX, String posY) {
+        this.idGridPoint = idGridPoint;
+        this.posX = posX;
+        this.posY = posY;
+    }
+
     public String getIdGridPoint() {
         return idGridPoint;
     }
