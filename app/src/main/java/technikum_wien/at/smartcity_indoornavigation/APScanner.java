@@ -14,9 +14,11 @@ import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import technikum_wien.at.smartcity_indoornavigation.Entities.AccessPoint;
+
 public class APScanner {
 
-    private ArrayList<String> arrayList = new ArrayList<>();
+    private ArrayList<AccessPoint> arrayList = new ArrayList<>();
     private List<ScanResult> temp;
     private ArrayAdapter wifi_adapter;
     private BluetoothAdapter mBluetoothAdapter;
@@ -26,7 +28,7 @@ public class APScanner {
     private static Context mContext;
 
 
-    public void showResults(){
+    public List<AccessPoint> showResults(){
         arrayList.clear();
         scanWifi();
         bluetoothScanning();
@@ -43,7 +45,7 @@ public class APScanner {
             //need to enable permission to access localization service
             for (ScanResult scanResult : temp) {
                 //if(filterAP(scanResult.BSSID)){
-                arrayList.add(scanResult.SSID + " - " + scanResult.BSSID + "    " + scanResult.level + " dBm");
+                arrayList.add(new AccessPoint(scanResult.BSSID, 0, true, scanResult.SSID, scanResult.level));
                 //}
                 wifi_adapter.notifyDataSetChanged();
             }
@@ -75,7 +77,8 @@ public class APScanner {
                 // Discovery has found a device. Get the BluetoothDevice object and its info from the Intent.
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 //Add the name and address to an array adapter to show in a ListView
-                arrayList.add(device.getClass() + "\n" + device.getAddress());
+                //arrayList.add(device.getClass() + "\n" + device.getAddress());
+                arrayList.add(new AccessPoint(device.getAddress(), 1, true, device.getName(), device.getBondState()));
             }
         }
 
