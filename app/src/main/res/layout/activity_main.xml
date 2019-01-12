@@ -7,20 +7,48 @@
     android:orientation="vertical">
 
 
-    <technikum_wien.at.smartcity_indoornavigation.MapView
-        android:id="@+id/navView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@mipmap/plan"
-        android:scaleX="1"
-        android:scaleY="1"
-        />
 
-    <!--
-   <ImageView
-    android:id="@+id/imageView"
-    android:layout_width="1px"
-    android:layout_height="1px"
-    />-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/plan"/>
+        <technikum_wien.at.smartcity_indoornavigation.MapView
+            android:id="@+id/navView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="1"
+            android:scaleY="1" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/colorPrimary">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="80dp" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="80dp" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="80dp" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="80dp" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="80dp" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="80dp" />
+
+    </LinearLayout>
 
 </LinearLayout>
+
+
