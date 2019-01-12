@@ -1,18 +1,16 @@
 package technikum_wien.at.smartcity_indoornavigation;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
-import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 
     //global variables for zooming
     private ScaleGestureDetector mScaleGestureDetector;
     private float mScaleFactor = 1.0f;
-    private MyView mImageView;
+    private MapView mImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
 
-    <technikum_wien.at.smartcity_indoornavigation.MyView
+    <technikum_wien.at.smartcity_indoornavigation.MapView
         android:id="@+id/navView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
