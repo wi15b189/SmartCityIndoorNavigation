@@ -14,6 +14,8 @@ import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import technikum_wien.at.smartcity_indoornavigation.Entities.AccessPoint;
+
 public class APScanner {
 
     private ArrayList<String> arrayList = new ArrayList<>();
@@ -26,10 +28,11 @@ public class APScanner {
     private static Context mContext;
 
 
-    public void showResults(){
+    public List<AccessPoint> showResults(){
         arrayList.clear();
         scanWifi();
         bluetoothScanning();
+        return null;
     }
 
     //Casting a Context object to an Activity object
