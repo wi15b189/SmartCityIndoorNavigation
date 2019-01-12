@@ -8,6 +8,8 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.View;
 
+import technikum_wien.at.smartcity_indoornavigation.Entities.GridPoint;
+
 public class MapView extends View {
 
     Paint paint;
@@ -30,9 +32,10 @@ public class MapView extends View {
     }
 
     private void init() {
+
         paint = new Paint();
-        paint.setColor(Color.BLUE);
-        paint.setStrokeWidth(8);
+        paint.setColor(Color.GREEN);
+        paint.setStrokeWidth(6);
         paint.setStyle(Paint.Style.STROKE);
 
         path = new Path();
@@ -44,11 +47,13 @@ public class MapView extends View {
 
     }
 
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawPath(path, paint);
 
     }
+
 
 }
